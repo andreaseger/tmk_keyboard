@@ -38,6 +38,9 @@
 # To rebuild project do "make clean" then "make all".
 #----------------------------------------------------------------------------
 
+# make sure the layout is the right way up
+OPT_DEFS=-DPCBDOWN
+
 # Set to /dev/cu.usbmodem1421 or whatever on Macs
 USB ?= /dev/ttyACM0
 
@@ -116,7 +119,7 @@ OPT_DEFS += -DBOOTLOADER_SIZE=4096
 #
 # BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
 # MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
-# EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
+EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE = yes	# Console for debug(+400)
 COMMAND_ENABLE = yes    # Commands for debug and configuration
 # SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
