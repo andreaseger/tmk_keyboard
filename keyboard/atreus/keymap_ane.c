@@ -84,13 +84,15 @@ The 5 layers can be viewed graphically:
 #define KC_RABK ACTION_MODS_KEY(MOD_LSFT, KC_DOT)
 #define KC_ZIN  ACTION_MODS_KEY(MOD_LCTL, KC_PLUS)
 #define KC_ZOUT ACTION_MODS_KEY(MOD_LCTL, KC_MINUS)
+#define KC_NEXT ACTION_MODS_KEY(MOD_LCTL, KC_PGUP)
+#define KC_PREV ACTION_MODS_KEY(MOD_LCTL, KC_PGDN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [ALPH] = KEYMAP( \
                   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, \
                   KC_A,    FN_NUMS, FN_FKEY, KC_F,    KC_G,                      KC_H,    KC_J,    FN_CURS, FN_SYMB, KC_SCLN, \
                   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, \
-                  FN_SUTB, KC_LBRC, KC_LCBR, KC_LPRN, FN_SFSP, FN_CTDL, FN_ALBS, FN_SFET, KC_RPRN, KC_RCBR, KC_RBRC, FN_CTES \
+                  FN_SUTB, KC_LBRC, KC_LCBR, KC_LPRN, FN_SFSP, FN_CTES, FN_ALBS, FN_SFET, KC_RPRN, KC_RCBR, KC_RBRC, FN_CTDL \
                    ),
   [NUMS] = KEYMAP( \
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_ASTR, KC_SLSH,                   KC_TRNS, KC_7,    KC_8,    KC_9,    KC_SLSH, \
@@ -107,14 +109,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [CURS] = KEYMAP( \
                   KC_HOME, KC_BSPC, KC_UP,   KC_DEL,  KC_PGUP,                   KC_TRNS, KM_SAVE, KC_TRNS, KM_OPEN, KC_ZIN, \
                   KC_END,  KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                   KM_UNDO, KC_LALT, KC_TRNS, KC_LGUI, KC_ZOUT, \
-                  KC_TRNS, KC_VOLD, KC_MUTE, KC_VOLU, KC_MPLY,                   KM_REDO, KM_CLSE, KC_TRNS, KC_TRNS, KC_TRNS, \
-                  KC_TRNS, KC_TRNS, FN_BOOT, KC_GRV,  KC_TAB,  KM_CUT,  KM_COPY, KM_PAST, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS \
+                  KC_NEXT, KC_VOLD, KC_MUTE, KC_VOLU, KC_MPLY,                   KM_REDO, KM_CLSE, KC_TRNS, KC_TRNS, KC_TRNS, \
+                  KC_PREV, KC_TRNS, FN_BOOT, KC_GRV,  KC_TAB,  KM_COPY,  KM_CUT, KM_PAST, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS \
                    ),
   [SYMB] = KEYMAP ( \
-                   KC_BSLS, KC_EXLM, KC_LABK, KC_RABK, MY_COLN,                   KC_UNDS, KC_DLR,  KC_QUES, KC_TRNS, KC_PERC, \
-                   KC_AT,   KC_AMPR, KC_LPRN, KC_RPRN, KC_SCLN,                   KC_COMM, KC_DOT,  KC_QUOT, KC_TRNS, KC_TILD, \
-                   KC_HASH, KC_PIPE, KC_LCBR, KC_RCBR, KC_SLSH,                   KC_TRNS, KC_GRV,  KC_DQT,  KC_TRNS, KC_CIRC, \
-                   KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS \
+                   KC_BSLS, KC_EXLM, KC_LABK, KC_RABK, MY_COLN,                   KC_UNDS,  KC_DLR,  KC_QUES, KC_TRNS, KC_PERC, \
+                   KC_AT,   KC_AMPR, KC_LPRN, KC_RPRN, KC_SCLN,                   KC_COMM,  KC_DOT,  KC_QUOT, KC_TRNS, KC_TILD, \
+                   KC_HASH, KC_PIPE, KC_LCBR, KC_RCBR, KC_SLSH,                   KC_MINUS, KC_GRV,  KC_DQT,  KC_TRNS, KC_CIRC, \
+                   KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS \
                     )
 };
 
